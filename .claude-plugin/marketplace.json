@@ -11,7 +11,7 @@
       "name": "whatsapp-ai-changelog",
       "source": "./",
       "description": "Genera mensajes de WhatsApp sobre herramientas de IA y publicaciones de GitHub, los adapta a destinatarios sin perfil de desarrollo y evalúa los borradores con Bayesian Compose y sus 30 criterios incluidos.",
-      "version": "1.5.0"
+      "version": "1.5.1"
     }
   ]
 }

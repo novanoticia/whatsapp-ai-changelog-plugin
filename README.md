@@ -1,4 +1,4 @@
-# WhatsApp AI Changelog
+# WhatsApp AI Changelog v1.5.1
 
 Plugin basado en la skill `whatsapp-ai-changelog` v1.5 del archivo adjunto.
 Convierte el README y las novedades verificables de un repositorio de IA en

@@ -1,0 +1,73 @@
+name: Publicar versión del plugin
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - plugin.json
+      - .github/workflows/release.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publicar-version-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Obtener el commit de la versión
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+
+      - name: Preparar el ZIP y las notas
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, os, re, subprocess
+          from pathlib import Path
+
+          manifest = json.loads(Path('plugin.json').read_text())
+          version = manifest['version']
+          if not re.fullmatch(r'\d+\.\d+\.\d+', version):
+              raise SystemExit('La versión debe usar SemVer estable: X.Y.Z')
+          claude = json.loads(Path('.claude-plugin/plugin.json').read_text())
+          marketplace = json.loads(Path('.claude-plugin/marketplace.json').read_text())
+          if claude['version'] != version or marketplace['plugins'][0]['version'] != version:
+              raise SystemExit('Las versiones de los manifiestos no coinciden')
+          changelog = Path('CHANGELOG.md').read_text()
+          section = re.search(r'^## \[' + re.escape(version) + r'\][^\n]*\n(.*?)(?=^## |\Z)', changelog, re.M | re.S)
+          if not section:
+              raise SystemExit('No hay notas de esta versión en CHANGELOG.md')
+          Path('dist').mkdir(exist_ok=True)
+          Path('dist/release-notes.md').write_text(section.group(1).strip() + '\n')
+          archive = f'dist/whatsapp-ai-changelog-plugin-{version}.zip'
+          subprocess.run(['git', 'archive', '--format=zip',
+                          '--prefix=whatsapp-ai-changelog-plugin/',
+                          '--output=' + archive, os.environ['GITHUB_SHA']], check=True)
+          with open(os.environ['GITHUB_ENV'], 'a') as env:
+              env.write(f'RELEASE_VERSION={version}\nRELEASE_ARCHIVE={archive}\n')
+          PY
+
+      - name: Publicar en GitHub Releases
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          release_tag="v${RELEASE_VERSION}"
+          if gh release view "$release_tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "La versión $release_tag ya existe."
+            exit 0
+          fi
+          gh release create "$release_tag" "$RELEASE_ARCHIVE" \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --title "WhatsApp AI Changelog $release_tag" \
+            --notes-file dist/release-notes.md \
+            --latest

@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [1.5.1] — 2026-10-09
 
 - Comprobada la última publicación estable aunque el README mencione versiones.
 - Conservadas las notas de publicación verificadas cuando el README no
@@ -8,6 +8,7 @@
   de las dos fuentes aporte cambios verificables.
 - Declarado el español como idioma predeterminado del flujo y traducidas
   las descripciones de los manifiestos y del marketplace.
+- Publicación de versiones y ZIP del plugin mediante GitHub Actions.
 
 ## [1.5.0] — 2026-10-09
 

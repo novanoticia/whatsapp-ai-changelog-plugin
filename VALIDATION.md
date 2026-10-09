@@ -1,5 +1,14 @@
 # Validación del paquete
 
+## Publicación 1.5.1
+
+- Versiones sincronizadas en ambos manifiestos, marketplace y skill principal.
+- Validaciones nativas de Claude repetidas sin errores.
+- Workflow de publicación con YAML válido, Python analizable y shell válido.
+- Preparación del ZIP comprobada contra el commit de la versión y sus notas.
+- Verificados los rechazos de versiones inconsistentes, SemVer inválido y
+  ausencia de notas de la versión antes de publicar.
+
 Comprobaciones realizadas el 9 de octubre de 2026:
 
 - Marketplace: `claude plugin validate .` — Validation passed.
