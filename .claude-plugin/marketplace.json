@@ -4,13 +4,13 @@
     "name": "Pablo Rodríguez López"
   },
   "metadata": {
-    "description": "WhatsApp AI Changelog with bundled Bayesian Compose."
+    "description": "Mensajes de WhatsApp sobre novedades de IA, en español, con Bayesian Compose incluido."
   },
   "plugins": [
     {
       "name": "whatsapp-ai-changelog",
       "source": "./",
-      "description": "Create WhatsApp messages about AI tools and GitHub releases, adapt them to non-developer audiences, and assess drafts with the bundled Bayesian Compose skill and its 30 criteria.",
+      "description": "Genera mensajes de WhatsApp sobre herramientas de IA y publicaciones de GitHub, los adapta a destinatarios sin perfil de desarrollo y evalúa los borradores con Bayesian Compose y sus 30 criterios incluidos.",
       "version": "1.5.0"
     }
   ]

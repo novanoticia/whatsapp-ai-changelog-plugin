@@ -4,9 +4,12 @@
 
 Fuente: archivo aportado por el usuario `whatsapp-ai-changelog.zip`.
 Autor indicado: Pablo. Versión de la skill: 1.5.
-Se conserva el contenido original y se añade una sección de integración
+Adaptada la skill original y añadida una sección de integración
 del plugin: rutas de la dependencia, entrevista única, acceso autorizado
 a GitHub y separación del mensaje final y del diagnóstico.
+Tras la revisión de `58779ad`, se corrige la comprobación de la última
+publicación y el uso de notas verificadas cuando el README no documenta
+versiones. Se declara también el español como idioma predeterminado.
 
 ## Bayesian Compose
 

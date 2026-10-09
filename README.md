@@ -8,6 +8,12 @@ de desarrollo.
 Incluye **Bayesian Compose v1.3.0**, sus 30 criterios, configuración y
 referencias. No requiere instalar esa dependencia por separado.
 
+## Idioma
+
+**Español (`es`)** es el idioma predeterminado del plugin y de la
+documentación. La entrevista, el mensaje y el diagnóstico se presentan en
+español. Puedes pedir otro idioma para la conversación o para el destinatario.
+
 ## Uso
 
 ```text
@@ -17,7 +23,9 @@ referencias. No requiere instalar esa dependencia por separado.
 También puedes pedir: «Mensaje WhatsApp sobre esta herramienta de IA:
 [enlace al repositorio]».
 
-1. Consulta el README y, cuando sea necesario, la última release.
+1. Consulta el README y comprueba siempre la última publicación estable
+   de GitHub cuando vaya a describir las últimas novedades, incluso si
+   el README ya menciona una versión.
 2. Pregunta por el perfil del receptor y realiza las cinco preguntas
    adaptadas de la entrevista, una por una.
 3. Genera un borrador de 200–350 palabras, con formato de WhatsApp.
@@ -25,8 +33,11 @@ También puedes pedir: «Mensaje WhatsApp sobre esta herramienta de IA:
 5. Permite iterar y entregar el texto limpio para copiar y pegar.
 
 El score estima la calidad del mensaje desde la perspectiva del receptor;
-no es una probabilidad calibrada de respuesta. Si no hay versión o novedades
-verificables, lo indica y se limita a funcionalidades documentadas.
+no es una probabilidad calibrada de respuesta. Las notas verificadas de
+GitHub se usan aunque el README no tenga una sección de versiones. Solo si
+ninguna de esas fuentes aporta cambios verificables se limita a
+funcionalidades documentadas, indicando la limitación. Si no puede comprobar
+la última publicación, no presenta una versión del README como la más reciente.
 El plugin redacta mensajes; no los envía.
 
 ## Instalación en Claude Code

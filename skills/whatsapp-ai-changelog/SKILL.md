@@ -4,6 +4,7 @@ description: "Genera mensajes de WhatsApp sobre novedades de herramientas o proy
 metadata:
   author: pablo
   version: '1.5'
+  language: es
 ---
 
 # WhatsApp AI Changelog
@@ -20,6 +21,13 @@ Actívala cuando el usuario escriba:
 
 **Dependencia obligatoria**: esta skill invoca el skill `bayesian-compose`. Cárgalo antes de ejecutar la Fase 2 si no está ya activo en la conversación.
 
+## Idioma
+
+El idioma predeterminado de este flujo es español (`es`): entrevista,
+borrador, notas editoriales y diagnóstico. Si el usuario solicita otro
+idioma de interacción o para el destinatario, respeta esa preferencia.
+Al cargar Bayesian Compose, aplica también este idioma a su evaluación.
+
 ---
 
 ## Flujo de ejecución
@@ -32,12 +40,27 @@ Actívala cuando el usuario escriba:
    Si la rama no está en la URL, prueba con `main` y luego con `master`.
 3. Del README extrae:
    - Nombre y descripción del proyecto
-   - Última versión o release (busca: `## vX.X.X`, `### Changelog`, `## What's New`, `## Releases`, badges de versión, o historial de cambios)
-   - Novedades de esa última versión (añadidos, correcciones, cambios)
+   - Versiones mencionadas (busca: `## vX.X.X`, `### Changelog`, `## What's New`, `## Releases`, badges de versión, o historial de cambios); no asumas que son la última publicación
+   - Cambios documentados y la versión a la que corresponden (añadidos, correcciones, cambios)
    - Funcionalidades principales (`Features`, `Características`, o equivalente)
    - Instrucciones básicas de uso o instalación (como contexto)
-4. Si el README no contiene información de versión, consulta la API pública de GitHub:
+4. Siempre que vayas a describir las «últimas novedades», comprueba la
+   última publicación estable de GitHub, aunque el README mencione una
+   versión. Usa el conector autorizado o la API pública:
    `https://api.github.com/repos/{usuario}/{repo}/releases/latest`
+   - Registra `tag_name`, `published_at`, `body` y `html_url` de la publicación
+     consultada. Contrasta la versión del README con esa publicación; una
+     insignia o sección histórica del README no prueba que sea la más reciente.
+   - Usa las notas de la publicación verificada para sus novedades. Completa
+     con cambios del README solo si corresponden a esa misma versión; no
+     mezcles cambios históricos con los de la última publicación.
+   - Este endpoint excluye borradores y versiones preliminares. Si el usuario
+     pide novedades de una versión preliminar, consulta también la lista de
+     publicaciones y distingue claramente su estado de la versión estable.
+   - Si no hay publicaciones o no puedes consultarlas, explica la limitación.
+     Conserva los cambios verificables del README con su versión y fuente,
+     pero no los presentes como los más recientes sin haberlo comprobado.
+     Un error de acceso no demuestra que no existan publicaciones.
 5. Si el repositorio es privado o inaccesible, informar al usuario y pedir que pegue el contenido del README directamente.
 
 ---
@@ -78,7 +101,7 @@ Si el usuario identifica algo incómodo, integrarlo en el borrador. Si dice "no 
 
 ### FASE 3 — Generación del borrador
 
-Con los datos del README, el perfil del destinatario y las respuestas de la entrevista, genera el borrador del mensaje de WhatsApp.
+Con los datos del README y las notas de publicación verificadas, el perfil del destinatario y las respuestas de la entrevista, genera el borrador del mensaje de WhatsApp.
 
 **Reglas de adaptación por perfil:**
 
@@ -153,7 +176,12 @@ No repetir el desglose completo de 30 criterios en cada iteración; mostrar solo
 
 ## Notas de implementación
 
-- Si el README no tiene sección de versiones, indicarlo explícitamente y construir el mensaje solo con funcionalidades, señalando la limitación.
+- Si el README no tiene sección de versiones pero GitHub proporciona notas
+  de publicación con cambios verificables, usa esas notas y su versión.
+- Construye el mensaje solo con funcionalidades cuando ni el README ni las
+  notas de publicación obtenidas proporcionen cambios verificables. Indica
+  la limitación y no presentes funcionalidades generales como novedades.
+  Una etiqueta de versión sin cambios documentados no basta para inventarlos.
 - El mensaje final debe poder copiarse y pegarse en WhatsApp sin edición adicional, salvo preferencia del usuario.
 - Esta skill no sustituye al skill bayesian-compose: lo invoca y sigue su protocolo completo de evaluación.
 - La Pregunta 0 (perfil del destinatario) es específica de esta skill y no forma parte del protocolo estándar de bayesian-compose; se ejecuta antes de la entrevista socrática para condicionar todo el flujo.
@@ -164,7 +192,7 @@ No repetir el desglose completo de 30 criterios en cada iteración; mostrar solo
 
 Esta skill usa el formato SKILL.md estándar (frontmatter YAML + cuerpo Markdown) y es compatible con cualquier asistente o agente de IA que soporte skills en este formato.
 
-- **Acceso a GitHub**: usa la capacidad de navegación o fetch web del asistente para leer la URL raw del README y, si hace falta, la API pública de GitHub (`/releases/latest`). Son recursos públicos. Si el asistente no puede acceder a la web, pide al usuario que pegue el README (ver Fase 1, paso 5).
+- **Acceso a GitHub**: usa la capacidad de navegación o fetch web del asistente para leer el README y comprobar `/releases/latest` siempre que describas las últimas novedades. Si el asistente no puede acceder a esas fuentes, pide el README y las notas de publicación; aclara que no puede verificar cuál es la última publicación.
 - **Dependencia `bayesian-compose`**: debe estar instalada en el mismo entorno. Si no se carga automáticamente, invócala antes de la Fase 2.
 - **Límite de descripción**: el campo `description` se mantiene por debajo de 500 caracteres y sin etiquetas tipo XML, para máxima compatibilidad entre plataformas.
 - **Sin estado entre sesiones**: el historial de scores de la Fase 5 vive solo dentro de la conversación activa.

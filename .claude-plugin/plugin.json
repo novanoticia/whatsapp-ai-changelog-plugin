@@ -1,7 +1,7 @@
 {
   "name": "whatsapp-ai-changelog",
   "version": "1.5.0",
-  "description": "Create WhatsApp messages about AI tools and GitHub releases, adapt them to non-developer audiences, and assess drafts with the bundled Bayesian Compose skill and its 30 criteria.",
+  "description": "Genera mensajes de WhatsApp sobre herramientas de IA y publicaciones de GitHub, los adapta a destinatarios sin perfil de desarrollo y evalúa los borradores con Bayesian Compose y sus 30 criterios incluidos.",
   "author": {
     "name": "Pablo Rodríguez López"
   },
@@ -13,6 +13,7 @@
     "changelog",
     "github",
     "writing",
-    "bayesian-compose"
+    "bayesian-compose",
+    "español"
   ]
 }
