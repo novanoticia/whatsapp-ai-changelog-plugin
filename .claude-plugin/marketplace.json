@@ -1,0 +1,17 @@
+{
+  "name": "whatsapp-ai-changelog-plugin",
+  "owner": {
+    "name": "Pablo Rodríguez López"
+  },
+  "metadata": {
+    "description": "WhatsApp AI Changelog with bundled Bayesian Compose."
+  },
+  "plugins": [
+    {
+      "name": "whatsapp-ai-changelog",
+      "source": "./",
+      "description": "Create WhatsApp messages about AI tools and GitHub releases, adapt them to non-developer audiences, and assess drafts with the bundled Bayesian Compose skill and its 30 criteria.",
+      "version": "1.5.0"
+    }
+  ]
+}
