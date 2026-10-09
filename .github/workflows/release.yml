@@ -55,6 +55,9 @@ jobs:
               env.write(f'RELEASE_VERSION={version}\nRELEASE_ARCHIVE={archive}\n')
           PY
 
+      - name: Preparar las distribuciones de Mistral y Perplexity
+        run: python3 scripts/package_skills.py --out dist/skills
+
       - name: Publicar en GitHub Releases
         shell: bash
         env:
@@ -66,6 +69,8 @@ jobs:
             exit 0
           fi
           gh release create "$release_tag" "$RELEASE_ARCHIVE" \
+            "dist/skills/whatsapp-ai-changelog-mistral-${RELEASE_VERSION}.zip" \
+            "dist/skills/whatsapp-ai-changelog-perplexity-${RELEASE_VERSION}.zip" \
             --repo "$GITHUB_REPOSITORY" \
             --target "$GITHUB_SHA" \
             --title "WhatsApp AI Changelog $release_tag" \

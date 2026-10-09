@@ -1,5 +1,20 @@
 # Validación del paquete
 
+## Distribuciones 1.5.2 para Mistral y Perplexity
+
+- Tres pruebas del generador: paquete completo de una sola skill, protección
+  de una salida con archivos existentes y rechazo de fuentes incompatibles.
+- Mistral: carpeta única `whatsapp-ai-changelog/`, sin skills anidadas.
+- Perplexity: `SKILL.md` en la raíz del ZIP; ninguna segunda skill que registrar.
+- Catálogo de 30 criterios idéntico al original y protocolo de evaluación
+  incluido como referencia, con rutas internas.
+- Descripción inferior a 490 bytes; frontmatter YAML estándar, idioma español
+  y versión 1.5.2. ZIPs inferiores a 10 MB, sin scripts ni manifiestos de plugin.
+- Validadas las instrucciones del workflow y los manifiestos de Claude.
+
+Estas comprobaciones verifican los archivos; no se ha probado la importación
+ni una conversación en las cuentas de Mistral o Perplexity del usuario.
+
 ## Publicación 1.5.1
 
 - Versiones sincronizadas en ambos manifiestos, marketplace y skill principal.

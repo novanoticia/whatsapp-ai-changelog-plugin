@@ -1,4 +1,4 @@
-# WhatsApp AI Changelog v1.5.1
+# WhatsApp AI Changelog v1.5.2
 
 Plugin basado en la skill `whatsapp-ai-changelog` v1.5 del archivo adjunto.
 Convierte el README y las novedades verificables de un repositorio de IA en
@@ -58,6 +58,24 @@ Para probar la carpeta local con Claude Code:
 claude --plugin-dir /ruta/whatsapp-ai-changelog-plugin
 ```
 
+## Instalación en Mistral Work
+
+Usa el asset **whatsapp-ai-changelog-mistral-1.5.2.zip** de
+[GitHub Releases](https://github.com/novanoticia/whatsapp-ai-changelog-plugin/releases/latest).
+Descomprímelo y crea una skill con la carpeta `whatsapp-ai-changelog/`.
+El protocolo de evaluación se incluye como referencias internas; basta
+una sola skill. El ZIP del plugin de Claude tiene otro formato.
+Consulta [MISTRAL.md](MISTRAL.md) para importar la carpeta o usar el editor.
+
+## Instalación en Perplexity Computer
+
+Usa **whatsapp-ai-changelog-perplexity-1.5.2.zip** de
+[GitHub Releases](https://github.com/novanoticia/whatsapp-ai-changelog-plugin/releases/latest)
+y súbelo directamente desde **Skills → Create skill → Upload a skill**.
+Registra solo `whatsapp-ai-changelog`: el método Bayesian Compose está
+incluido en las referencias y evita una segunda skill con ese nombre.
+Consulta [PERPLEXITY.md](PERPLEXITY.md) para los detalles.
+
 ## Otros clientes
 
 La raíz contiene `plugin.json` para clientes que admitan Agent Plugins
@@ -66,7 +84,8 @@ La disponibilidad de instalación desde GitHub depende del cliente.
 El soporte específico de ChatGPT/Codex debe comprobarse en su instalador;
 este paquete no crea ni registra por sí solo un plugin en su catálogo.
 
-Si tu cliente importa skills individualmente, importa **ambas** carpetas:
+Para otros clientes que importen las skills del plugin individualmente,
+importa **ambas** carpetas:
 `skills/whatsapp-ai-changelog/` y `skills/bayesian-compose/`.
 
 ## Requisitos

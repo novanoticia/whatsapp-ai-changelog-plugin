@@ -1,6 +1,6 @@
 {
   "name": "whatsapp-ai-changelog",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Genera mensajes de WhatsApp sobre herramientas de IA y publicaciones de GitHub, los adapta a destinatarios sin perfil de desarrollo y evalúa los borradores con Bayesian Compose y sus 30 criterios incluidos.",
   "author": {
     "name": "Pablo Rodríguez López"
