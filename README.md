@@ -1,4 +1,4 @@
-# WhatsApp AI Changelog v1.6.0
+# WhatsApp AI Changelog v1.7.0
 
 Plugin basado en la skill `whatsapp-ai-changelog` v1.5 del archivo adjunto.
 Convierte el README y las novedades verificables de un repositorio de IA en
@@ -77,7 +77,7 @@ claude --plugin-dir /ruta/whatsapp-ai-changelog-plugin
 
 ## Instalación en Mistral Work
 
-Usa el asset **whatsapp-ai-changelog-mistral-1.6.0.zip** de
+Usa el asset **whatsapp-ai-changelog-mistral-1.7.0.zip** de
 [GitHub Releases](https://github.com/novanoticia/whatsapp-ai-changelog-plugin/releases/latest).
 Descomprímelo y crea una skill con la carpeta `whatsapp-ai-changelog/`.
 El protocolo de evaluación se incluye como referencias internas; basta
@@ -86,7 +86,7 @@ Consulta [MISTRAL.md](MISTRAL.md) para importar la carpeta o usar el editor.
 
 ## Instalación en Perplexity Computer
 
-Usa **whatsapp-ai-changelog-perplexity-1.6.0.zip** de
+Usa **whatsapp-ai-changelog-perplexity-1.7.0.zip** de
 [GitHub Releases](https://github.com/novanoticia/whatsapp-ai-changelog-plugin/releases/latest)
 y súbelo directamente desde **Skills → Create skill → Upload a skill**.
 Registra solo `whatsapp-ai-changelog`: el método Bayesian Compose está

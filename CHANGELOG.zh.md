@@ -1,11 +1,11 @@
-<!-- i18n fuente-sha256=7aeeed3944cb estado=borrador-ia -->
+<!-- i18n fuente-sha256=5bb12922bbde estado=borrador-ia -->
 
 # 更新日志
 
 > [CHANGELOG.md](CHANGELOG.md) 的简体中文翻译（`borrador-ia`：机器翻译，未经人工
 > 审核）。如有出入，以西班牙语文件为准。在 GitHub 上发布的版本说明来自西班牙语文件。
 
-## [未发布]
+## [1.7.0] — 2026-10-11
 
 - 新增法语（`fr`）和简体中文（`zh`）作为界面语言，使用 `idioma=fr` 和 `idioma=zh`，
   固定文本对照表位于 `skills/whatsapp-ai-changelog/references/i18n/fr.md` 和

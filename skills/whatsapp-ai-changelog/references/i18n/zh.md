@@ -1,4 +1,4 @@
-<!-- i18n fuente-sha256=cb9418ef0954 estado=borrador-ia -->
+<!-- i18n fuente-sha256=dff3abd42f88 estado=borrador-ia -->
 
 # 固定文本对照表 — 中文（简体）
 
