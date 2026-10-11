@@ -1,4 +1,4 @@
-<!-- i18n fuente-sha256=312ef33d0ebe estado=borrador-ia -->
+<!-- i18n fuente-sha256=7aeeed3944cb estado=borrador-ia -->
 
 # 更新日志
 
@@ -19,7 +19,8 @@
 - Mistral 和 Perplexity 的软件包包含 `fr.md` 和 `zh.md`。
 - 不修改 `description`：在法语和中文中，自然语言触发取决于平台；命令
   `/whatsapp-ai-changelog` 始终可用。
-- 待办：对翻译进行人工审核（中文的不确定性更大），并重新进行情景评估。
+- 情景评估已于 2026-10-11 运行（模拟，每个情景一次）：本轮 7 个全部通过；重新运行的 S6
+  修复了此前的失败。待办：对翻译进行人工审核（中文的不确定性更大）。
 
 由 AI 辅助编写；需要人工审核。
 
