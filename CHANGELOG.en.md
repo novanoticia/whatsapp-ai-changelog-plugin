@@ -1,4 +1,4 @@
-<!-- i18n fuente-sha256=d0027c9ad9bc estado=borrador-ia -->
+<!-- i18n fuente-sha256=a1a8e2d6f5eb estado=borrador-ia -->
 
 # Changelog
 
@@ -17,6 +17,7 @@ Added:
 - English documentation: `README.en.md`, `CHANGELOG.en.md` and `PRIVACY.en.md`.
 - Tests in `tests/test_i18n.py`, and the Mistral and Perplexity packages now
   include `references/i18n/en.md`.
+- Added the `Pruebas` workflow, which runs `tests/` on every pull request.
 
 Changed (approved exceptions to the default output, to withdraw by reverting
 this change):
