@@ -1,5 +1,27 @@
 # Changelog
 
+<!-- i18n:inicio -->
+## [Sin publicar]
+
+- Añadida la interfaz en inglés, seleccionable con `idioma=en` en la primera
+  línea del mensaje (`es` y `en`), con equivalencias de textos fijos en
+  `skills/whatsapp-ai-changelog/references/i18n/en.md`. Sin marcador, el
+  comportamiento no cambia.
+- Añadida documentación en inglés: `README.en.md`, `CHANGELOG.en.md` y
+  `PRIVACY.en.md`. Las traducciones son borradores de IA sin revisión humana.
+- Excepciones aprobadas: la `description` de la skill principal y la de los
+  paquetes de una sola skill mencionan también la frase de activación en inglés
+  (cambia cuándo se activa la skill; se retira revirtiendo ese cambio), y toda
+  respuesta en inglés empieza con un aviso de traducción automática (nunca en
+  español ni dentro del mensaje final).
+- Los paquetes de Mistral y Perplexity incluyen `references/i18n/en.md`.
+- Pendiente: evaluación por escenarios del bloque de idioma, revisión humana de
+  las traducciones y decidir la versión (cambiar `plugin.json` dispara la
+  publicación).
+
+Elaborado con asistencia de IA; requiere revisión humana.
+<!-- i18n:fin -->
+
 ## [1.5.2] — 2026-10-09
 
 - Añadidas distribuciones de una sola skill para Mistral Work y Perplexity, con el
