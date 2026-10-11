@@ -1,4 +1,4 @@
-<!-- i18n fuente-sha256=4c88e735d5df estado=borrador-ia -->
+<!-- i18n fuente-sha256=cb9418ef0954 estado=borrador-ia -->
 
 # Fixed-text equivalences — English
 
@@ -74,7 +74,7 @@ give feedback, change their workflow, or simply learn about the news.
 | No se ha comprobado cuál es la última publicación. | The latest release has not been checked. |
 | El diagnóstico está pendiente. | The diagnosis is pending. |
 | Ninguna fuente aporta cambios verificables; el mensaje se limita a funcionalidades documentadas. | No source provides verifiable changes; the message is limited to documented features. |
-| Idioma no disponible. Idiomas disponibles: `es` y `en`. | Language not available. Available languages: `es` and `en`. |
+| Idioma no disponible. Idiomas disponibles: `es`, `en`, `fr` y `zh`. | Language not available. Available languages: `es`, `en`, `fr` and `zh`. |
 
 Elaborado con asistencia de IA; requiere revisión humana. (AI-assisted;
 requires human review.)

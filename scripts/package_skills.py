@@ -95,8 +95,9 @@ def build(root, output):
         'references/protocolo-bayesian-compose.md': protocol,
         'references/criterios-30-emision.md':
             (root / 'skills/bayesian-compose/references/criterios-30-emision.md').read_text(),
-        'references/i18n/en.md':
-            (root / 'skills/whatsapp-ai-changelog/references/i18n/en.md').read_text(),
+        **{f'references/i18n/{code}.md':
+           (root / f'skills/whatsapp-ai-changelog/references/i18n/{code}.md').read_text()
+           for code in ('en', 'fr', 'zh')},
         'LICENSE': (root / 'LICENSE').read_text(),
         'NOTICE.md': (
             '# Procedencia\n\nSkill WhatsApp AI Changelog de Pablo, adaptada para Mistral Work y Perplexity.\n'
@@ -104,7 +105,7 @@ def build(root, output):
             'Origen: https://github.com/novanoticia/bayesian-compose-plugin\n\n'
             'Se incluyen los pasos 4–6 del protocolo, con la ruta del catálogo\n'
             'adaptada; el catálogo de criterios se conserva sin modificaciones.\n'
-            'Se incluye references/i18n/en.md (inglés, borrador-ia) de la skill principal.\n'
+            'Se incluyen references/i18n/en.md, fr.md y zh.md (borrador-ia) de la skill principal.\n'
             'La adaptación utiliza una sola carpeta, referencias internas y\n'
             'preferencias de sesión, sin configuración persistente ni telemetría.\n'
         ),

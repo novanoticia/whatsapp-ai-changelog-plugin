@@ -9,13 +9,30 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = 'skills/whatsapp-ai-changelog/SKILL.md'
-EN = 'skills/whatsapp-ai-changelog/references/i18n/en.md'
-TRANSLATIONS = {
-    EN: SKILL,
-    'README.en.md': 'README.md',
-    'PRIVACY.en.md': 'PRIVACY.md',
-    'CHANGELOG.en.md': 'CHANGELOG.md',
+I18N = 'skills/whatsapp-ai-changelog/references/i18n'
+LANGUAGES = {
+    'en': {
+        'notice': 'Translation machine-generated, not human-reviewed.',
+        'failsafe': 'English version unavailable; continuing with the Spanish files.',
+        'ai': 'AI-assisted; requires human review.',
+    },
+    'fr': {
+        'notice': 'Traduction automatique, non relue par un humain.',
+        'failsafe': 'Version française indisponible ; poursuite avec les fichiers espagnols.',
+        'ai': 'Élaboré avec l’assistance de l’IA ; relecture humaine requise.',
+    },
+    'zh': {
+        'notice': '机器翻译，未经人工审核。',
+        'failsafe': '中文版本不可用；继续使用西班牙语文件。',
+        'ai': '由 AI 辅助编写；需要人工审核。',
+    },
 }
+TRANSLATIONS = {}
+for code in LANGUAGES:
+    TRANSLATIONS[f'{I18N}/{code}.md'] = SKILL
+    TRANSLATIONS[f'README.{code}.md'] = 'README.md'
+    TRANSLATIONS[f'PRIVACY.{code}.md'] = 'PRIVACY.md'
+    TRANSLATIONS[f'CHANGELOG.{code}.md'] = 'CHANGELOG.md'
 SPEC = importlib.util.spec_from_file_location('package_skills', ROOT / 'scripts/package_skills.py')
 MODULE = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(MODULE)
@@ -35,22 +52,41 @@ class TranslationTests(unittest.TestCase):
             digest = hashlib.sha256((ROOT / source).read_bytes()).hexdigest()[:12]
             self.assertEqual(found.group(1), digest, f'{translation} is stale: update it from {source}')
 
-    def test_machine_contracts_are_kept_in_english_equivalences(self):
-        text = read(EN)
-        for token in ('/whatsapp-ai-changelog', 'idioma=', '[NOTA]', 'REPLY_NEEDED', 'REVIEW',
-                      'READING_LATER', 'ARCHIVE', '🔴', '🟡', '🔵', '⚪'):
-            self.assertIn(token, read(SKILL), token)
-            self.assertIn(token, text, token)
+    def test_machine_contracts_are_kept_in_equivalences(self):
+        for code in LANGUAGES:
+            text = read(f'{I18N}/{code}.md')
+            for token in ('/whatsapp-ai-changelog', 'idioma=', '[NOTA]', 'REPLY_NEEDED', 'REVIEW',
+                          'READING_LATER', 'ARCHIVE', '🔴', '🟡', '🔵', '⚪'):
+                self.assertIn(token, read(SKILL), token)
+                self.assertIn(token, text, f'{code}: {token}')
 
-    def test_ai_notice_in_public_english_documents(self):
-        for translation in ('README.en.md', 'PRIVACY.en.md', 'CHANGELOG.en.md'):
-            self.assertIn('AI-assisted; requires human review.', read(translation))
+    def test_equivalences_list_all_available_languages(self):
+        for code in LANGUAGES:
+            text = read(f'{I18N}/{code}.md')
+            for available in ('`es`', '`en`', '`fr`', '`zh`'):
+                self.assertIn(available, text, f'{code}: {available}')
+
+    def test_ai_notice_in_public_translated_documents(self):
+        for code, texts in LANGUAGES.items():
+            for name in (f'README.{code}.md', f'PRIVACY.{code}.md', f'CHANGELOG.{code}.md'):
+                self.assertIn(texts['ai'], read(name), name)
         self.assertNotIn('AI-assisted', read('PRIVACY.md'))
 
-    def test_local_links_in_english_documents_exist(self):
-        for translation in ('README.en.md', 'PRIVACY.en.md', 'CHANGELOG.en.md'):
-            for target in re.findall(r'\]\(([^)#:]+)\)', read(translation)):
-                self.assertTrue((ROOT / target).exists(), f'{translation}: {target}')
+    def test_local_links_in_translated_documents_exist(self):
+        for code in LANGUAGES:
+            for name in (f'README.{code}.md', f'PRIVACY.{code}.md', f'CHANGELOG.{code}.md'):
+                for target in re.findall(r'\]\(([^)#:]+)\)', read(name)):
+                    self.assertTrue((ROOT / target).exists(), f'{name}: {target}')
+
+    def test_translated_documents_keep_versions_and_code_blocks(self):
+        version = re.search(r'^# WhatsApp AI Changelog (v[\d.]+)$', read('README.md'), re.M).group(1)
+        for code in LANGUAGES:
+            text = read(f'README.{code}.md')
+            self.assertIn(f'# WhatsApp AI Changelog {version}', text)
+            self.assertEqual(text.count('```'), read('README.md').count('```'), code)
+            self.assertIn('/plugin marketplace add novanoticia/whatsapp-ai-changelog-plugin', text)
+            self.assertIn(f'mistral-{version[1:]}.zip', text)
+            self.assertIn(f'perplexity-{version[1:]}.zip', text)
 
 
 class LanguageBlockTests(unittest.TestCase):
@@ -78,22 +114,35 @@ class LanguageBlockTests(unittest.TestCase):
         flat = ' '.join(block.split())
         self.assertIn('`idioma=xx`', block)
         self.assertNotIn('lang=', block)
-        self.assertIn('Translation machine-generated, not human-reviewed.', flat)
-        self.assertIn('English version unavailable; continuing with the Spanish files.', flat)
-        self.assertLessEqual(len(block.encode()), 3000)
+        for code, texts in LANGUAGES.items():
+            self.assertIn(texts['notice'], flat, code)
+            self.assertIn(texts['failsafe'], flat, code)
+            self.assertIn(f'`{code}`', block, code)
+        self.assertLessEqual(len(block.encode()), 3500)
         self.assertEqual(text.count('## Integración de este plugin'), 1)
+
+    def test_traditional_chinese_is_not_served_as_simplified(self):
+        block = read(SKILL).split(MARKERS[0])[1].split(MARKERS[1])[0]
+        for tag in ('zh-Hant', 'zh-TW', 'zh-HK'):
+            self.assertIn(tag, block)
+        self.assertIn('no está disponible', block)
+
+    def test_fail_safe_answers_in_spanish(self):
+        block = ' '.join(read(SKILL).split(MARKERS[0])[1].split(MARKERS[1])[0].split())
+        self.assertIn('responde en español, sin aviso de traducción', block)
 
 
 class PackageTests(unittest.TestCase):
-    def test_single_skill_packages_include_english_equivalences(self):
+    def test_single_skill_packages_include_equivalences(self):
         with tempfile.TemporaryDirectory() as directory:
             skill, archives = MODULE.build(ROOT, Path(directory) / 'output')
-            expected = (ROOT / EN).read_bytes()
-            self.assertEqual((skill / 'references/i18n/en.md').read_bytes(), expected)
-            for platform, archive in archives.items():
-                prefix = 'whatsapp-ai-changelog/' if platform == 'mistral' else ''
-                with zipfile.ZipFile(archive) as packaged:
-                    self.assertEqual(packaged.read(prefix + 'references/i18n/en.md'), expected)
+            for code in LANGUAGES:
+                expected = (ROOT / f'{I18N}/{code}.md').read_bytes()
+                self.assertEqual((skill / f'references/i18n/{code}.md').read_bytes(), expected)
+                for platform, archive in archives.items():
+                    prefix = 'whatsapp-ai-changelog/' if platform == 'mistral' else ''
+                    with zipfile.ZipFile(archive) as packaged:
+                        self.assertEqual(packaged.read(f'{prefix}references/i18n/{code}.md'), expected)
             self.assertIn('idioma=xx', (skill / 'SKILL.md').read_text(encoding='utf-8'))
             self.assertLessEqual(len(MODULE.DESCRIPTION.encode()), 490)
 
