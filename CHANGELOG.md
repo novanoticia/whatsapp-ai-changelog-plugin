@@ -1,6 +1,20 @@
 # Changelog
 
 <!-- i18n:inicio -->
+## [Sin publicar]
+
+- Cambiada la `description` de la skill principal y de los paquetes de una sola
+  skill: ahora incluye también frases de activación en francés y chino
+  («message WhatsApp sur cet outil d’IA», «关于这个AI工具的WhatsApp消息»), de modo
+  que la skill pueda activarse con peticiones en esos idiomas. Cambia cuándo se
+  activa la skill; se retira revirtiendo ese cambio. Para respetar el límite de 500
+  caracteres de la propia skill se acortó el resto del texto: «novedades de
+  herramientas de IA» (antes «… o proyectos de IA»), «desde el README de un repo
+  GitHub», «Adapta el tono al receptor» y «Trigger:» (antes «Trigger obligatorio:»).
+  La activación sigue dependiendo de la plataforma.
+
+Elaborado con asistencia de IA; requiere revisión humana.
+
 ## [1.7.0] — 2026-10-11
 
 - Añadidos el francés (`fr`) y el chino simplificado (`zh`) como idiomas de la

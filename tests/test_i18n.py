@@ -105,7 +105,9 @@ class LanguageBlockTests(unittest.TestCase):
         text = read(SKILL)
         description = re.search(r'^description: "(.*)"$', text, re.M).group(1)
         self.assertLess(len(description), 500)
-        self.assertIn('WhatsApp message about this AI tool', description)
+        for phrase in ('mensaje WhatsApp sobre esta herramienta de IA', 'WhatsApp message about this AI tool',
+                       'message WhatsApp sur cet outil d’IA', '关于这个AI工具的WhatsApp消息'):
+            self.assertIn(phrase, description)
         self.assertIn('/whatsapp-ai-changelog [URL]', description)
 
     def test_selection_rule_is_keyed_and_has_fail_safe(self):

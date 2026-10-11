@@ -1,4 +1,4 @@
-<!-- i18n fuente-sha256=5bb12922bbde estado=borrador-ia -->
+<!-- i18n fuente-sha256=99bcfec1477f estado=borrador-ia -->
 
 # Changelog
 
@@ -6,6 +6,21 @@
 > traduction automatique, non relue par un humain). En cas de divergence, le
 > fichier espagnol fait foi. Les notes de version publiées sur GitHub proviennent
 > du fichier espagnol.
+
+## [Non publié]
+
+- Modification de la `description` de la skill principale et des paquets à skill
+  unique : elle inclut désormais aussi des phrases de déclenchement en français et
+  en chinois (« message WhatsApp sur cet outil d’IA », « 关于这个AI工具的WhatsApp消息 »),
+  afin que la skill puisse s’activer sur des demandes dans ces langues. Cela change
+  le moment où la skill s’active ; pour le retirer, annuler ce changement. Pour
+  respecter la limite de 500 caractères de la skill elle-même, le reste du texte a
+  été raccourci : « novedades de herramientas de IA » (avant « … o proyectos de
+  IA »), « desde el README de un repo GitHub », « Adapta el tono al receptor » et
+  « Trigger: » (avant « Trigger obligatorio: »). L’activation dépend toujours de la
+  plateforme.
+
+Élaboré avec l’assistance de l’IA ; relecture humaine requise.
 
 ## [1.7.0] — 2026-10-11
 

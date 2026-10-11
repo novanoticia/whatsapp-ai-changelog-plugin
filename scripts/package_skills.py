@@ -11,7 +11,8 @@ DESCRIPTION = (
     "sobre una herramienta de IA. Comprueba novedades en GitHub, entrevista "
     "al usuario y adapta el mensaje al destinatario. Evalúa los 30 criterios "
     "de Bayesian Compose incluidos. Idioma predeterminado: español; "
-    "idioma=en para inglés. Also: WhatsApp message about an AI tool."
+    "idioma=en|fr|zh para otros idiomas. Also: WhatsApp message about an AI "
+    "tool; message WhatsApp sur un outil d’IA; 关于AI工具的WhatsApp消息."
 )
 
 

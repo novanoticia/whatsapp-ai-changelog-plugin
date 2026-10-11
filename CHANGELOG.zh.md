@@ -1,9 +1,20 @@
-<!-- i18n fuente-sha256=5bb12922bbde estado=borrador-ia -->
+<!-- i18n fuente-sha256=99bcfec1477f estado=borrador-ia -->
 
 # 更新日志
 
 > [CHANGELOG.md](CHANGELOG.md) 的简体中文翻译（`borrador-ia`：机器翻译，未经人工
 > 审核）。如有出入，以西班牙语文件为准。在 GitHub 上发布的版本说明来自西班牙语文件。
+
+## [未发布]
+
+- 修改了主技能以及单技能软件包的 `description`：现在还包含法语和中文的触发短语
+  （“message WhatsApp sur cet outil d’IA”、“关于这个AI工具的WhatsApp消息”），使技能能够在
+  这些语言的请求下被激活。这会改变技能被激活的时机；撤销此变更即可取消。为了遵守技能
+  自身的 500 字符限制，其余文字被缩短：“novedades de herramientas de IA”（原为“… o
+  proyectos de IA”）、“desde el README de un repo GitHub”、“Adapta el tono al receptor”
+  和“Trigger:”（原为“Trigger obligatorio:”）。能否被激活仍取决于平台。
+
+由 AI 辅助编写；需要人工审核。
 
 ## [1.7.0] — 2026-10-11
 
