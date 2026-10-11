@@ -3,7 +3,7 @@ name: whatsapp-ai-changelog
 description: "Genera mensajes de WhatsApp sobre novedades de herramientas de IA desde el README de un repo GitHub. Adapta el tono al receptor (usuario general o profesional no-dev) y evalúa el borrador con bayesian-compose (30 criterios). Trigger: '/whatsapp-ai-changelog [URL]'. También con 'mensaje WhatsApp sobre esta herramienta de IA', 'WhatsApp message about this AI tool', 'message WhatsApp sur cet outil d’IA' o '关于这个AI工具的WhatsApp消息'. Requiere el skill bayesian-compose: cárgalo si no está activo."
 metadata:
   author: pablo
-  version: '1.7.0'
+  version: '1.7.1'
   language: es
 ---
 

@@ -5,7 +5,7 @@ registrar otra skill con ese mismo nombre. Usa la distribución autónoma,
 que registra solo `whatsapp-ai-changelog` e incluye el método de evaluación
 como archivos de referencia internos.
 
-1. Descarga **whatsapp-ai-changelog-perplexity-1.7.0.zip** de
+1. Descarga **whatsapp-ai-changelog-perplexity-1.7.1.zip** de
    [GitHub Releases](https://github.com/novanoticia/whatsapp-ai-changelog-plugin/releases/latest).
 2. En Perplexity Computer, abre **Skills → Create skill → Upload a skill**.
 3. Sube ese ZIP directamente. Contiene `SKILL.md` en la raíz y sus referencias.

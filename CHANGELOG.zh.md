@@ -1,11 +1,11 @@
-<!-- i18n fuente-sha256=99bcfec1477f estado=borrador-ia -->
+<!-- i18n fuente-sha256=489904b108b3 estado=borrador-ia -->
 
 # 更新日志
 
 > [CHANGELOG.md](CHANGELOG.md) 的简体中文翻译（`borrador-ia`：机器翻译，未经人工
 > 审核）。如有出入，以西班牙语文件为准。在 GitHub 上发布的版本说明来自西班牙语文件。
 
-## [未发布]
+## [1.7.1] — 2026-10-11
 
 - 修改了主技能以及单技能软件包的 `description`：现在还包含法语和中文的触发短语
   （“message WhatsApp sur cet outil d’IA”、“关于这个AI工具的WhatsApp消息”），使技能能够在
