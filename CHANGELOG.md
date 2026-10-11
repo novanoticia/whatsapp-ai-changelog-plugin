@@ -1,6 +1,28 @@
 # Changelog
 
 <!-- i18n:inicio -->
+## [Sin publicar]
+
+- Añadidos el francés (`fr`) y el chino simplificado (`zh`) como idiomas de la
+  interfaz, con `idioma=fr` e `idioma=zh` y equivalencias de textos fijos en
+  `skills/whatsapp-ai-changelog/references/i18n/fr.md` y `zh.md`. El chino
+  tradicional (`zh-Hant`, `zh-TW`, `zh-HK`) no está disponible y no se sustituye
+  por el simplificado. Sin marcador, el comportamiento no cambia.
+- Añadida documentación en francés y en chino: `README`, `CHANGELOG` y `PRIVACY`
+  (`.fr.md` y `.zh.md`). Son borradores de IA sin revisión humana.
+- Cambiado el aviso de traducción: cada idioma lo muestra en ese idioma, y con
+  el fallo seguro (sin el fichero de equivalencias) la respuesta pasa a ser en
+  español con la línea de aviso del idioma pedido (antes seguía en el idioma
+  pedido; corrige el hallazgo S6 de la evaluación por escenarios).
+- Los paquetes de Mistral y Perplexity incluyen `fr.md` y `zh.md`.
+- No se cambia la `description`: en francés y chino la activación por lenguaje
+  natural depende de la plataforma; el comando `/whatsapp-ai-changelog` funciona
+  siempre.
+- Pendiente: revisión humana de las traducciones (en chino, con más
+  incertidumbre) y nueva evaluación por escenarios.
+
+Elaborado con asistencia de IA; requiere revisión humana.
+
 ## [1.6.0] — 2026-10-11
 
 - Añadida la interfaz en inglés, seleccionable con `idioma=en` en la primera

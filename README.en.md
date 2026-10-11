@@ -1,4 +1,4 @@
-<!-- i18n fuente-sha256=1b026cd802dd estado=borrador-ia -->
+<!-- i18n fuente-sha256=7685d7af6b68 estado=borrador-ia -->
 
 # WhatsApp AI Changelog v1.6.0
 
@@ -20,13 +20,17 @@ references. You do not need to install that dependency separately.
 The interview, the message and the diagnosis are presented in Spanish. You can ask
 for another language for the conversation or for the recipient.
 
-To run the interview and the diagnosis in English, write `idioma=en` as a separate
-word on the first line of your message, for example
-`/whatsapp-ai-changelog idioma=en https://github.com/user/repository`. Without the
-marker nothing changes. Available languages: `es` (reference) and `en`
-(machine-translated draft, not human-reviewed). Every English response opens with
-the notice "Translation machine-generated, not human-reviewed."; the final message
-you copy into WhatsApp never carries it.
+To run the interview and the diagnosis in another language, write `idioma=en`,
+`idioma=fr` or `idioma=zh` (Simplified Chinese) as a separate word on the first line
+of your message, for example
+`/whatsapp-ai-changelog idioma=fr https://github.com/user/repository`. Without the
+marker nothing changes. Available languages: `es` (reference), `en`, `fr` and `zh`
+(machine-translated drafts, not human-reviewed; Traditional Chinese is not
+available). Every response in those languages opens with a translation notice in
+that language; the final message you copy into WhatsApp never carries it.
+Translated documentation: [README.en.md](README.en.md),
+[README.fr.md](README.fr.md) and [README.zh.md](README.zh.md), each with its
+`CHANGELOG.<code>.md` and `PRIVACY.<code>.md`.
 
 The message itself is written in the language you choose for the recipient; if you
 do not choose one, in the language of the conversation. The interface text,
@@ -36,8 +40,9 @@ translated. The manifests (`plugin.json`, marketplace), `VALIDATION.md`,
 
 To add a language, create `skills/whatsapp-ai-changelog/references/i18n/<code>.md`
 following the structure of `en.md`, add the code to the language block of
-`skills/whatsapp-ai-changelog/SKILL.md`, and list the file in
-`scripts/package_skills.py`.
+`skills/whatsapp-ai-changelog/SKILL.md`, list the file in
+`scripts/package_skills.py` and the new language in `tests/test_i18n.py`, and add
+its documentation files.
 
 ## Usage
 

@@ -15,15 +15,18 @@ documentación. La entrevista, el mensaje y el diagnóstico se presentan en
 español. Puedes pedir otro idioma para la conversación o para el destinatario.
 
 <!-- i18n:inicio -->
-Para conducir la entrevista y el diagnóstico en inglés, escribe `idioma=en` como
-palabra suelta en la primera línea de tu mensaje, por ejemplo
-`/whatsapp-ai-changelog idioma=en https://github.com/usuario/repositorio`. Sin
-marcador no cambia nada. Idiomas disponibles: `es` (referencia) y `en`
-(borrador de traducción automática, sin revisión humana). Documentación en
-inglés: [README.en.md](README.en.md), [CHANGELOG.en.md](CHANGELOG.en.md) y
-[PRIVACY.en.md](PRIVACY.en.md). Los manifiestos, `VALIDATION.md`, `MISTRAL.md`,
-`PERPLEXITY.md` y `THIRD_PARTY_NOTICES.md` siguen solo en español. Para añadir un
-idioma, consulta la sección «Language» de [README.en.md](README.en.md).
+Para conducir la entrevista y el diagnóstico en otro idioma, escribe
+`idioma=en`, `idioma=fr` o `idioma=zh` (chino simplificado) como palabra suelta
+en la primera línea de tu mensaje, por ejemplo
+`/whatsapp-ai-changelog idioma=fr https://github.com/usuario/repositorio`. Sin
+marcador no cambia nada. Idiomas disponibles: `es` (referencia), `en`, `fr` y
+`zh` (borradores de traducción automática, sin revisión humana; el chino
+tradicional no está disponible). Documentación traducida:
+[inglés](README.en.md), [francés](README.fr.md) y [chino](README.zh.md), con sus
+`CHANGELOG.<código>.md` y `PRIVACY.<código>.md`. Los manifiestos,
+`VALIDATION.md`, `MISTRAL.md`, `PERPLEXITY.md` y `THIRD_PARTY_NOTICES.md` siguen
+solo en español. Para añadir un idioma, consulta la sección «Language» de
+[README.en.md](README.en.md).
 
 Elaborado con asistencia de IA; requiere revisión humana.
 <!-- i18n:fin -->
