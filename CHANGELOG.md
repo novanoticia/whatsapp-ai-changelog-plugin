@@ -15,6 +15,7 @@
   respuesta en inglés empieza con un aviso de traducción automática (nunca en
   español ni dentro del mensaje final).
 - Los paquetes de Mistral y Perplexity incluyen `references/i18n/en.md`.
+- Añadido el workflow `Pruebas`, que ejecuta `tests/` en cada pull request.
 - Pendiente: evaluación por escenarios del bloque de idioma, revisión humana de
   las traducciones y decidir la versión (cambiar `plugin.json` dispara la
   publicación).
