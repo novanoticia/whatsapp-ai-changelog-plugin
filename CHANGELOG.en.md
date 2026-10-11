@@ -1,4 +1,4 @@
-<!-- i18n fuente-sha256=312ef33d0ebe estado=borrador-ia -->
+<!-- i18n fuente-sha256=7aeeed3944cb estado=borrador-ia -->
 
 # Changelog
 
@@ -23,8 +23,9 @@
 - The `description` is not changed: in French and Chinese, activation by natural
   language depends on the platform; the `/whatsapp-ai-changelog` command always
   works.
-- Pending: human review of the translations (Chinese with more uncertainty) and a
-  new scenario evaluation.
+- Scenario evaluation run on 2026-10-11 (simulated, one attempt per scenario): 7 of
+  7 passed in this round; the S6 rerun fixes the earlier failure. Pending: human
+  review of the translations (Chinese with more uncertainty).
 
 AI-assisted; requires human review.
 

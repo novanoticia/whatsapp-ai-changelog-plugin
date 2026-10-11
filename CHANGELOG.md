@@ -18,8 +18,10 @@
 - No se cambia la `description`: en francés y chino la activación por lenguaje
   natural depende de la plataforma; el comando `/whatsapp-ai-changelog` funciona
   siempre.
-- Pendiente: revisión humana de las traducciones (en chino, con más
-  incertidumbre) y nueva evaluación por escenarios.
+- Evaluación por escenarios ejecutada el 2026-10-11 (simulada, un intento por
+  escenario): 7 de 7 superadas en esta ronda; la repetición de S6 corrige el fallo
+  anterior. Pendiente: revisión humana de las traducciones (en chino, con más
+  incertidumbre).
 
 Elaborado con asistencia de IA; requiere revisión humana.
 

@@ -1,4 +1,4 @@
-<!-- i18n fuente-sha256=312ef33d0ebe estado=borrador-ia -->
+<!-- i18n fuente-sha256=7aeeed3944cb estado=borrador-ia -->
 
 # Changelog
 
@@ -26,8 +26,10 @@
 - La `description` n’est pas modifiée : en français et en chinois, l’activation en
   langage naturel dépend de la plateforme ; la commande `/whatsapp-ai-changelog`
   fonctionne toujours.
-- En attente : relecture humaine des traductions (le chinois avec davantage
-  d’incertitude) et nouvelle évaluation par scénarios.
+- Évaluation par scénarios exécutée le 2026-10-11 (simulée, un essai par
+  scénario) : 7 sur 7 réussis lors de cette série ; la reprise de S6 corrige
+  l’échec précédent. En attente : relecture humaine des traductions (le chinois
+  avec davantage d’incertitude).
 
 Élaboré avec l’assistance de l’IA ; relecture humaine requise.
 
