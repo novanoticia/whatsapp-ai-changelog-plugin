@@ -1,10 +1,24 @@
-<!-- i18n fuente-sha256=5bb12922bbde estado=borrador-ia -->
+<!-- i18n fuente-sha256=99bcfec1477f estado=borrador-ia -->
 
 # Changelog
 
 > English translation of [CHANGELOG.md](CHANGELOG.md) (`borrador-ia`: machine
 > translation, not human-reviewed). If they differ, the Spanish file governs.
 > Release notes published on GitHub come from the Spanish file.
+
+## [Unreleased]
+
+- Changed the `description` of the main skill and of the single-skill packages: it
+  now also includes trigger phrases in French and Chinese ("message WhatsApp sur
+  cet outil d’IA", "关于这个AI工具的WhatsApp消息"), so the skill can activate on
+  requests in those languages. This changes when the skill activates; revert this
+  change to withdraw it. To stay within the skill's own 500-character limit the
+  rest of the text was shortened: "novedades de herramientas de IA" (was "… o
+  proyectos de IA"), "desde el README de un repo GitHub", "Adapta el tono al
+  receptor" and "Trigger:" (was "Trigger obligatorio:"). Activation still depends
+  on the platform.
+
+AI-assisted; requires human review.
 
 ## [1.7.0] — 2026-10-11
 

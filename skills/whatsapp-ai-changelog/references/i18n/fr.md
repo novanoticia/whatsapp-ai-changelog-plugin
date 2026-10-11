@@ -1,4 +1,4 @@
-<!-- i18n fuente-sha256=dff3abd42f88 estado=borrador-ia -->
+<!-- i18n fuente-sha256=c8f1da939d4b estado=borrador-ia -->
 
 # Équivalences des textes fixes — français
 
