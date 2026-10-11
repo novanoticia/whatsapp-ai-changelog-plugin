@@ -1,4 +1,4 @@
-<!-- i18n fuente-sha256=7aeeed3944cb estado=borrador-ia -->
+<!-- i18n fuente-sha256=5bb12922bbde estado=borrador-ia -->
 
 # Changelog
 
@@ -6,7 +6,7 @@
 > translation, not human-reviewed). If they differ, the Spanish file governs.
 > Release notes published on GitHub come from the Spanish file.
 
-## [Unreleased]
+## [1.7.0] — 2026-10-11
 
 - Added French (`fr`) and Simplified Chinese (`zh`) as interface languages, with
   `idioma=fr` and `idioma=zh` and fixed-text equivalences in

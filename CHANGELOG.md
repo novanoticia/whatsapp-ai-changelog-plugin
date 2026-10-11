@@ -1,7 +1,7 @@
 # Changelog
 
 <!-- i18n:inicio -->
-## [Sin publicar]
+## [1.7.0] — 2026-10-11
 
 - Añadidos el francés (`fr`) y el chino simplificado (`zh`) como idiomas de la
   interfaz, con `idioma=fr` e `idioma=zh` y equivalencias de textos fijos en

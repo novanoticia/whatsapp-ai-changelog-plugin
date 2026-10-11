@@ -7,7 +7,7 @@ ese paquete completo como una única skill de Mistral.
 ## Qué descargar
 
 En [GitHub Releases](https://github.com/novanoticia/whatsapp-ai-changelog-plugin/releases/latest),
-descarga **whatsapp-ai-changelog-mistral-1.6.0.zip** y descomprímelo.
+descarga **whatsapp-ai-changelog-mistral-1.7.0.zip** y descomprímelo.
 El ZIP se usa para transportar la carpeta, no como formato de importación.
 
 La carpeta resultante tiene esta estructura:
