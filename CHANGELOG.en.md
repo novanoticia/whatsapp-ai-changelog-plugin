@@ -1,10 +1,32 @@
-<!-- i18n fuente-sha256=60b95e11d1ae estado=borrador-ia -->
+<!-- i18n fuente-sha256=312ef33d0ebe estado=borrador-ia -->
 
 # Changelog
 
 > English translation of [CHANGELOG.md](CHANGELOG.md) (`borrador-ia`: machine
 > translation, not human-reviewed). If they differ, the Spanish file governs.
 > Release notes published on GitHub come from the Spanish file.
+
+## [Unreleased]
+
+- Added French (`fr`) and Simplified Chinese (`zh`) as interface languages, with
+  `idioma=fr` and `idioma=zh` and fixed-text equivalences in
+  `skills/whatsapp-ai-changelog/references/i18n/fr.md` and `zh.md`. Traditional
+  Chinese (`zh-Hant`, `zh-TW`, `zh-HK`) is not available and is not replaced by
+  Simplified. Without the marker the behavior does not change.
+- Added French and Chinese documentation: `README`, `CHANGELOG` and `PRIVACY`
+  (`.fr.md` and `.zh.md`). They are AI drafts with no human review.
+- Changed the translation notice: each language shows it in that language, and
+  with the fail-safe (equivalences file missing) the reply now switches to
+  Spanish with the notice line of the requested language (it used to stay in the
+  requested language; fixes finding S6 of the scenario evaluation).
+- The Mistral and Perplexity packages include `fr.md` and `zh.md`.
+- The `description` is not changed: in French and Chinese, activation by natural
+  language depends on the platform; the `/whatsapp-ai-changelog` command always
+  works.
+- Pending: human review of the translations (Chinese with more uncertainty) and a
+  new scenario evaluation.
+
+AI-assisted; requires human review.
 
 ## [1.6.0] — 2026-10-11
 
