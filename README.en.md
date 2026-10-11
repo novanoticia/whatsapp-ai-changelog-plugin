@@ -1,6 +1,6 @@
-<!-- i18n fuente-sha256=42a00b8d80c3 estado=borrador-ia -->
+<!-- i18n fuente-sha256=1b026cd802dd estado=borrador-ia -->
 
-# WhatsApp AI Changelog v1.5.2
+# WhatsApp AI Changelog v1.6.0
 
 > English translation of [README.md](README.md) (`borrador-ia`: machine
 > translation, not human-reviewed). If they differ, the Spanish
@@ -84,7 +84,7 @@ claude --plugin-dir /path/whatsapp-ai-changelog-plugin
 
 ## Installation in Mistral Work
 
-Use the asset **whatsapp-ai-changelog-mistral-1.5.2.zip** from
+Use the asset **whatsapp-ai-changelog-mistral-1.6.0.zip** from
 [GitHub Releases](https://github.com/novanoticia/whatsapp-ai-changelog-plugin/releases/latest).
 Unzip it and create a skill with the `whatsapp-ai-changelog/` folder. The
 evaluation protocol is included as internal references; a single skill is enough.
@@ -93,7 +93,7 @@ Spanish) for importing the folder or using the editor.
 
 ## Installation in Perplexity Computer
 
-Use **whatsapp-ai-changelog-perplexity-1.5.2.zip** from
+Use **whatsapp-ai-changelog-perplexity-1.6.0.zip** from
 [GitHub Releases](https://github.com/novanoticia/whatsapp-ai-changelog-plugin/releases/latest)
 and upload it directly from **Skills → Create skill → Upload a skill**. Register
 only `whatsapp-ai-changelog`: the Bayesian Compose method is included in the

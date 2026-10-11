@@ -1,4 +1,4 @@
-<!-- i18n fuente-sha256=a1a8e2d6f5eb estado=borrador-ia -->
+<!-- i18n fuente-sha256=60b95e11d1ae estado=borrador-ia -->
 
 # Changelog
 
@@ -6,7 +6,7 @@
 > translation, not human-reviewed). If they differ, the Spanish file governs.
 > Release notes published on GitHub come from the Spanish file.
 
-## [Unreleased]
+## [1.6.0] — 2026-10-11
 
 Added:
 
@@ -37,8 +37,6 @@ Limitations:
   `THIRD_PARTY_NOTICES.md` remain in Spanish only. The manifest schema has no
   verified multilingual description field.
 - The scenario evaluation of the new language block has not been run (pending).
-- The version has not been bumped; bumping `plugin.json` triggers the release
-  workflow.
 
 ## [1.5.2] — 2026-10-09
 

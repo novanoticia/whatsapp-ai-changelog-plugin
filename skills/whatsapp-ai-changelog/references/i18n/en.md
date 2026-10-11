@@ -1,4 +1,4 @@
-<!-- i18n fuente-sha256=28b000e85d57 estado=borrador-ia -->
+<!-- i18n fuente-sha256=4c88e735d5df estado=borrador-ia -->
 
 # Fixed-text equivalences — English
 

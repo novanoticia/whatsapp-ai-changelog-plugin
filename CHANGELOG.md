@@ -1,7 +1,7 @@
 # Changelog
 
 <!-- i18n:inicio -->
-## [Sin publicar]
+## [1.6.0] — 2026-10-11
 
 - Añadida la interfaz en inglés, seleccionable con `idioma=en` en la primera
   línea del mensaje (`es` y `en`), con equivalencias de textos fijos en
@@ -16,9 +16,8 @@
   español ni dentro del mensaje final).
 - Los paquetes de Mistral y Perplexity incluyen `references/i18n/en.md`.
 - Añadido el workflow `Pruebas`, que ejecuta `tests/` en cada pull request.
-- Pendiente: evaluación por escenarios del bloque de idioma, revisión humana de
-  las traducciones y decidir la versión (cambiar `plugin.json` dispara la
-  publicación).
+- Pendiente: evaluación por escenarios del bloque de idioma y revisión humana de
+  las traducciones (borradores de IA).
 
 Elaborado con asistencia de IA; requiere revisión humana.
 <!-- i18n:fin -->
