@@ -1,6 +1,6 @@
-<!-- i18n fuente-sha256=5f4cac09c9d4 estado=borrador-ia -->
+<!-- i18n fuente-sha256=ba495d6bfa2e estado=borrador-ia -->
 
-# WhatsApp AI Changelog v1.7.0
+# WhatsApp AI Changelog v1.7.1
 
 > [README.md](README.md) 的简体中文翻译（`borrador-ia`：机器翻译，未经人工审核）。
 > 如有出入，以西班牙语的 [README.md](README.md) 为准。
@@ -77,7 +77,7 @@ claude --plugin-dir /ruta/whatsapp-ai-changelog-plugin
 ## 在 Mistral Work 中安装
 
 使用 [GitHub Releases](https://github.com/novanoticia/whatsapp-ai-changelog-plugin/releases/latest)
-中的资源 **whatsapp-ai-changelog-mistral-1.7.0.zip**。解压后，用
+中的资源 **whatsapp-ai-changelog-mistral-1.7.1.zip**。解压后，用
 `whatsapp-ai-changelog/` 文件夹创建一个技能。评估协议已作为内部参考资料包含在内；
 只需一个技能即可。Claude 插件的 ZIP 格式不同。导入文件夹或使用编辑器的方法，请参见
 [MISTRAL.md](MISTRAL.md)（西班牙语）。
@@ -85,7 +85,7 @@ claude --plugin-dir /ruta/whatsapp-ai-changelog-plugin
 ## 在 Perplexity Computer 中安装
 
 使用 [GitHub Releases](https://github.com/novanoticia/whatsapp-ai-changelog-plugin/releases/latest)
-中的 **whatsapp-ai-changelog-perplexity-1.7.0.zip**，并通过
+中的 **whatsapp-ai-changelog-perplexity-1.7.1.zip**，并通过
 **Skills → Create skill → Upload a skill** 直接上传。只注册
 `whatsapp-ai-changelog`：Bayesian Compose 方法已包含在参考资料中，从而避免出现
 同名的第二个技能。详情请参见 [PERPLEXITY.md](PERPLEXITY.md)（西班牙语）。

@@ -1,7 +1,7 @@
 # Changelog
 
 <!-- i18n:inicio -->
-## [Sin publicar]
+## [1.7.1] — 2026-10-11
 
 - Cambiada la `description` de la skill principal y de los paquetes de una sola
   skill: ahora incluye también frases de activación en francés y chino

@@ -1,4 +1,4 @@
-<!-- i18n fuente-sha256=99bcfec1477f estado=borrador-ia -->
+<!-- i18n fuente-sha256=489904b108b3 estado=borrador-ia -->
 
 # Changelog
 
@@ -6,7 +6,7 @@
 > translation, not human-reviewed). If they differ, the Spanish file governs.
 > Release notes published on GitHub come from the Spanish file.
 
-## [Unreleased]
+## [1.7.1] — 2026-10-11
 
 - Changed the `description` of the main skill and of the single-skill packages: it
   now also includes trigger phrases in French and Chinese ("message WhatsApp sur
