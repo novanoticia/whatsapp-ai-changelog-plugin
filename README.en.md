@@ -2,6 +2,9 @@
 
 # WhatsApp AI Changelog v1.7.1
 
+[![Version on main](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnovanoticia%2Fwhatsapp-ai-changelog-plugin%2Fmain%2Fplugin.json&query=%24.version&prefix=v&label=Version%20on%20main&color=blue)](https://github.com/novanoticia/whatsapp-ai-changelog-plugin/blob/main/plugin.json)
+[![Latest published version](https://img.shields.io/github/v/release/novanoticia/whatsapp-ai-changelog-plugin?display_name=tag&label=Latest%20published%20version&color=green)](https://github.com/novanoticia/whatsapp-ai-changelog-plugin/releases/latest)
+
 > English translation of [README.md](README.md) (`borrador-ia`: machine
 > translation, not human-reviewed). If they differ, the Spanish
 > [README.md](README.md) governs.
