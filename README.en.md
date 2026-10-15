@@ -1,4 +1,4 @@
-<!-- i18n fuente-sha256=ba495d6bfa2e estado=borrador-ia -->
+<!-- i18n fuente-sha256=9227776a338b estado=borrador-ia -->
 
 # WhatsApp AI Changelog v1.7.1
 
