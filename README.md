@@ -1,5 +1,7 @@
 # WhatsApp AI Changelog v1.7.1
 
+[![Versión actual en main](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnovanoticia%2Fwhatsapp-ai-changelog-plugin%2Fmain%2Fplugin.json&query=%24.version&prefix=v&label=Versi%C3%B3n%20actual%20en%20main&color=blue)](https://github.com/novanoticia/whatsapp-ai-changelog-plugin/blob/main/plugin.json)
+
 Plugin basado en la skill `whatsapp-ai-changelog` v1.5 del archivo adjunto.
 Convierte el README y las novedades verificables de un repositorio de IA en
 un mensaje de WhatsApp para usuarios generales o profesionales sin perfil
