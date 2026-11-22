@@ -1,13 +1,16 @@
-<!-- i18n fuente-sha256=ba495d6bfa2e estado=borrador-ia -->
+<!-- i18n fuente-sha256=5f2935c97c85 estado=borrador-ia -->
 
 # WhatsApp AI Changelog v1.7.1
+
+[![Version sur main](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnovanoticia%2Fwhatsapp-ai-changelog-plugin%2Fmain%2Fplugin.json&query=%24.version&prefix=v&label=Version%20sur%20main&color=blue)](https://github.com/novanoticia/whatsapp-ai-changelog-plugin/blob/main/plugin.json)
+[![Dernière version publiée](https://img.shields.io/github/v/release/novanoticia/whatsapp-ai-changelog-plugin?display_name=tag&label=Derni%C3%A8re%20version%20publi%C3%A9e&color=green)](https://github.com/novanoticia/whatsapp-ai-changelog-plugin/releases/latest)
 
 > Traduction française de [README.md](README.md) (`borrador-ia` : traduction
 > automatique, non relue par un humain). En cas de divergence, le
 > [README.md](README.md) espagnol fait foi.
 
-Plugin basé sur la version 1.5 de la skill `whatsapp-ai-changelog` du fichier
-joint. Il transforme le README et les nouveautés vérifiables d’un dépôt d’IA en
+Plugin basé sur la version 1.5 de la skill `whatsapp-ai-changelog` de Pablo.
+Il transforme le README et les nouveautés vérifiables d’un dépôt d’IA en
 un message WhatsApp destiné à des utilisateurs grand public ou à des
 professionnels sans profil de développeur.
 

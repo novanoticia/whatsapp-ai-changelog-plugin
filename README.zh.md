@@ -1,11 +1,14 @@
-<!-- i18n fuente-sha256=ba495d6bfa2e estado=borrador-ia -->
+<!-- i18n fuente-sha256=5f2935c97c85 estado=borrador-ia -->
 
 # WhatsApp AI Changelog v1.7.1
+
+[![main 分支版本](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnovanoticia%2Fwhatsapp-ai-changelog-plugin%2Fmain%2Fplugin.json&query=%24.version&prefix=v&label=main%20%E5%88%86%E6%94%AF%E7%89%88%E6%9C%AC&color=blue)](https://github.com/novanoticia/whatsapp-ai-changelog-plugin/blob/main/plugin.json)
+[![最新发布版本](https://img.shields.io/github/v/release/novanoticia/whatsapp-ai-changelog-plugin?display_name=tag&label=%E6%9C%80%E6%96%B0%E5%8F%91%E5%B8%83%E7%89%88%E6%9C%AC&color=green)](https://github.com/novanoticia/whatsapp-ai-changelog-plugin/releases/latest)
 
 > [README.md](README.md) 的简体中文翻译（`borrador-ia`：机器翻译，未经人工审核）。
 > 如有出入，以西班牙语的 [README.md](README.md) 为准。
 
-本插件基于所附压缩包中的 `whatsapp-ai-changelog` 技能 1.5 版。它把某个 AI 仓库的
+本插件基于 Pablo 的 `whatsapp-ai-changelog` 技能 1.5 版。它把某个 AI 仓库的
 README 和可核实的更新内容，转换成一条 WhatsApp 消息，面向普通用户或没有开发背景的
 专业人士。
 

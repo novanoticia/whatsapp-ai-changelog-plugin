@@ -1,4 +1,4 @@
-<!-- i18n fuente-sha256=9227776a338b estado=borrador-ia -->
+<!-- i18n fuente-sha256=5f2935c97c85 estado=borrador-ia -->
 
 # WhatsApp AI Changelog v1.7.1
 
@@ -9,8 +9,8 @@
 > translation, not human-reviewed). If they differ, the Spanish
 > [README.md](README.md) governs.
 
-Plugin based on version 1.5 of the `whatsapp-ai-changelog` skill from the attached
-archive. It turns the README and the verifiable news of an AI repository into a
+Plugin based on version 1.5 of Pablo's `whatsapp-ai-changelog` skill. It turns
+the README and the verifiable news of an AI repository into a
 WhatsApp message for general users or for professionals without a developer
 profile.
 
